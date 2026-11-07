@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мама — мой главный герой</title>
+    <!-- Подключаем красивый шрифт из Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Сброс базовых стилей */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #fdf5f7; /* Нежно-розовый фон */
+            color: #4a3b3f;
+            line-height: 1.6;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        /* Главный контейнер, чтобы контент не растягивался на весь экран */
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(128, 0, 32, 0.1); /* Мягкая тень */
+            border-top: 8px solid #800020; /* Бордовая полоса сверху */
+        }
+
+        /* Главный экран */
+        .hero h1 {
+            font-family: 'Pacifico', cursive;
+            color: #800020; /* Бордовый цвет */
+            font-size: 2.8em;
+            margin-bottom: 15px;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.1em;
+            color: #666;
+            margin-bottom: 30px;
+            font-weight: 400;
+        }
+
+        /* Стили для изображения */
+        .main-image {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            object-fit: cover;
+        }
+
+        /* Блок теплых слов */
+        .warm-words {
+            background-color: #fff8f9;
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            border-left: 4px solid #800020;
+            text-align: left;
+        }
+
+        .warm-words h2 {
+            color: #800020;
+            margin-bottom: 10px;
+            font-size: 1.5em;
+        }
+
+        /* Список причин */
+        .reasons {
+            text-align: left;
+            margin-bottom: 40px;
+        }
+
+        .reasons h2 {
+            color: #800020;
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+
+        .reasons ul {
+            list-style-type: none; /* Убираем стандартные маркеры */
+        }
+
+        .reasons li {
+            margin-bottom: 10px;
+            padding-left: 30px;
+            position: relative;
+            font-size: 1.1em;
+        }
+
+        /* Заменяем стандартный маркер на сердечко */
+        .reasons li::before {
+            content: '❤';
+            color: #800020;
+            position: absolute;
+            left: 0;
+            font-size: 1.2em;
+        }
+
+        /* Кнопка-сюрприз */
+        .btn {
+            background-color: #800020;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.1em;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: bold;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+            box-shadow: 0 4px 10px rgba(128, 0, 32, 0.3);
+        }
+
+        .btn:hover {
+            background-color: #a30029;
+            transform: translateY(-3px); /* Кнопка немного подпрыгивает */
+        }
+
+        /* Скрытый блок с сюрпризом */
+        #surprise {
+            display: none; /* Изначально скрыт */
+            margin-top: 30px;
+            padding: 25px;
+            background: linear-gradient(135deg, #fff0f5, #ffe4e1);
+            border-radius: 15px;
+            border: 2px dashed #800020;
+        }
+        
+        #surprise p {
+            font-size: 1.2em;
+            font-style: italic;
+            color: #800020;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- 01. Главный экран -->
+        <header class="hero">
+            <h1>Мама, ты моё сердце!</h1>
+            <p>Спасибо за жизнь, тепло и бесконечную любовь.</p>
+        </header>
+
+        <!-- 02. Изображение -->
+        <!-- Здесь мы используем картинку-заглушку с милыми цветами. Ты можешь заменить ссылку на свою фотографию -->
+        <img src="mama.jpg" alt="Моя любимая мама" class="main-image">
+
+        <!-- 03. Тёплые слова -->
+        <section class="warm-words">
+            <h2>Мой самый дорогой человек</h2>
+            <p>Дорогая мамочка! В этот день я хочу сказать тебе спасибо. Спасибо за твоё терпение, за мудрые советы и за то, что ты всегда рядом, даже когда я далеко. Ты — мой надежный тыл и мой самый главный герой.</p>
+        </section>
+
+        <!-- 04. Пять причин -->
+        <section class="reasons">
+            <h2>5 причин, почему ты особенная</h2>
+            <ul>
+                <li>Твоя улыбка делает мой день лучше.</li>
+                <li>Ты всегда выслушаешь и поддержишь.</li>
+                <li>Твои объятия лечат любые болезни.</li>
+                <li>Ты умеешь найти выход из любой ситуации.</li>
+                <li>Ты любишь меня просто за то, что я есть.</li>
+            </ul>
+        </section>
+
+        <!-- 05. Сюрприз -->
+        <div class="surprise-section">
+            <button class="btn" onclick="showSurprise()">Нажми сюда для сюрприза</button>
+            
+            <div id="surprise">
+                <p>«Мама — это единственный человек на свете, который будет любить тебя даже тогда, когда весь мир отвернётся. Я тебя очень люблю! ❤️»</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Функция для показа скрытого блока
+        function showSurprise() {
+            var surpriseBlock = document.getElementById('surprise');
+            
+            // Если блок скрыт, показываем его. Если показан - скрываем обратно (по желанию)
+            if (surpriseBlock.style.display === "none" || surpriseBlock.style.display === "") {
+                surpriseBlock.style.display = "block";
+                // Меняем текст на кнопке после нажатия (для интерактивности)
+                document.querySelector('.btn').innerText = "Я тебя люблю! ❤️";
+            } else {
+                surpriseBlock.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+</html>
